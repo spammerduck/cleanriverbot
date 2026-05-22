@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e4;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(28, 32, 33, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .status-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .4; }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-tertiary": "#2c3133",
+                        "on-surface": "#e0e3e4",
+                        "tertiary": "#dfe3e6",
+                        "tertiary-fixed-dim": "#c3c7ca",
+                        "surface-container-high": "#272b2c",
+                        "inverse-on-surface": "#2d3132",
+                        "outline": "#90909a",
+                        "on-primary": "#1f2d5e",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#454747",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "outline-variant": "#45464f",
+                        "surface-variant": "#313536",
+                        "background": "#101415",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "inverse-surface": "#e0e3e4",
+                        "surface-tint": "#b7c4ff",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container": "#1c2021",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-surface-variant": "#c6c5d0",
+                        "inverse-primary": "#4f5c90",
+                        "surface-container-low": "#181c1d",
+                        "on-tertiary-fixed": "#171c1e",
+                        "primary-container": "#b7c4ff",
+                        "tertiary-fixed": "#dfe3e6",
+                        "on-background": "#e0e3e4",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface": "#101415",
+                        "surface-container-highest": "#313536",
+                        "tertiary-container": "#c3c7ca",
+                        "surface-dim": "#101415",
+                        "on-secondary": "#2f3131",
+                        "on-tertiary-container": "#4e5355",
+                        "secondary": "#c6c6c7",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#dce1ff",
+                        "on-tertiary-fixed-variant": "#42484a",
+                        "on-primary-fixed-variant": "#374476",
+                        "on-primary-container": "#435083",
+                        "on-primary-fixed": "#071749",
+                        "on-error": "#690005",
+                        "primary": "#dde1ff",
+                        "surface-bright": "#363a3b",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1.5rem",
+                        "container-max": "1440px",
+                        "section-padding": "8rem",
+                        "margin-inline": "2rem",
+                        "gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["Inter"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-base": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "500"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "body-md-mobile": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-base antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-inline py-5 max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase hover:text-primary transition-colors">
+                CleanRiver Bot
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="technology.html">Technology</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="impact.html">Impact</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="gallery.html">Gallery</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="command.html">Command</a>
+</div>
+<a href="deploy.html" class="bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm uppercase tracking-widest rounded-sm hover:scale-95 transition-all duration-200">
+                Deploy Bot
+            </a>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding">
+<div class="px-margin-inline max-w-container-max mx-auto">
+<!-- Dashboard Header -->
+<header class="mb-stack-md flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-primary">Operational Status</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase tracking-tighter">Command Center</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Global Fleet Connectivity</span>
+<span class="text-primary font-nav-link text-nav-link">98.4% UPTIME</span>
+</div>
+<div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="hub">hub</span>
+</div>
+</div>
+</header>
+<!-- Command Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Tactical Map (6 Columns) -->
+<section class="lg:col-span-8 rounded-xl border border-white/10 overflow-hidden bg-surface-container-low relative min-h-[500px]">
+<div class="absolute inset-0 z-0 grayscale contrast-125 brightness-50 opacity-60">
+<img alt="Satellite Map View" class="w-full h-full object-cover" data-alt="A high-contrast satellite view of a complex river delta system at night, rendered in cool monochromatic blue and grey tones. The river paths are sharply defined against the dark industrial landscape, featuring subtle glowing digital overlays and grid lines that evoke a high-tech tactical mission interface. The mood is clinical, professional, and technologically advanced." data-location="Thames River" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd84pfGEOJlcUU43lhRRExZ50wf0pCKHq00YAiApyvW374wIp3t5djl5k0jSismrAGZl9npXrfBV7Uq7coNrj77Q8_Twc--Dj_kG3UnefGUkhFDanHN_acJJmM9xVKWeNzTKaD8YSKaibQ8SRoTNOYGM2R-0kxSbdqutVvMCDwAGlowclqLMt7__bYeUXWagAeTFGMemOKEsdyREmytbmoicoVUPDQobRqzD3OXLJdAsks8a0sjZ69XKsGNByVFo0TWIJ49KrCGdI"/>
+</div>
+<!-- Map Overlays -->
+<div class="absolute inset-0 pointer-events-none p-6 flex flex-col justify-between">
+<div class="flex justify-between">
+<div class="glass-panel p-4 rounded flex items-center gap-3">
+<span class="w-2 h-2 bg-primary rounded-full status-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase">Sector 7G-Delta: Active</span>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 glass-panel rounded flex items-center justify-center pointer-events-auto hover:bg-white/10">
+<span class="material-symbols-outlined" data-icon="zoom_in">zoom_in</span>
+</a>
+<button class="w-10 h-10 glass-panel rounded flex items-center justify-center pointer-events-auto hover:bg-white/10">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+</a>
+</div>
+</div>
+<!-- Bot Markers (Simulated) -->
+<div class="absolute top-[40%] left-[30%] pointer-events-auto group cursor-pointer">
+<div class="relative">
+<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-background text-sm" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 glass-panel px-3 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm uppercase">Bot-01: Processing</span>
+</div>
+</div>
+</div>
+<div class="absolute top-[60%] left-[65%] pointer-events-auto group cursor-pointer">
+<div class="relative">
+<div class="w-8 h-8 bg-on-surface rounded-full flex items-center justify-center border-2 border-primary">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 glass-panel px-3 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm uppercase">Bot-02: Docked</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bot Status Sidebar (4 Columns) -->
+<aside class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Bot 01 Card -->
+<div class="border border-white/10 p-6 rounded-xl bg-surface-container-high space-y-6">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<h3 class="font-headline-md text-headline-md uppercase tracking-wide">Bot-01</h3>
+<span class="inline-flex items-center gap-2 px-2 py-1 rounded border border-primary/30 bg-primary/5 text-primary text-[10px] uppercase font-bold tracking-widest">
+                                Mission Active
+                            </span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Battery</span>
+<div class="text-xl font-display-lg text-on-surface">84%</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between font-label-sm text-label-sm uppercase text-on-surface-variant">
+<span>Waste Collected</span>
+<span class="text-on-surface">124.5 kg</span>
+</div>
+<div class="w-full h-1 bg-surface-variant overflow-hidden">
+<div class="h-full bg-primary w-[75%]"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm uppercase text-on-surface-variant">
+<span>Runtime</span>
+<span class="text-on-surface">04:12:33</span>
+</div>
+</div>
+</div>
+<!-- Bot 02 Card -->
+<div class="border border-white/10 p-6 rounded-xl bg-surface-container-low space-y-6 opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<h3 class="font-headline-md text-headline-md uppercase tracking-wide">Bot-02</h3>
+<span class="inline-flex items-center gap-2 px-2 py-1 rounded border border-white/20 bg-white/5 text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">
+                                Docked / Maintenance
+                            </span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Battery</span>
+<div class="text-xl font-display-lg text-primary">100%</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between font-label-sm text-label-sm uppercase text-on-surface-variant">
+<span>System Integrity</span>
+<span class="text-on-surface">Optimal</span>
+</div>
+<div class="w-full h-1 bg-surface-variant overflow-hidden">
+<div class="h-full bg-on-surface-variant w-[100%]"></div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Mission Logs (12 Columns Full Width) -->
+<section class="lg:col-span-12 border border-white/10 rounded-xl bg-surface-container-lowest overflow-hidden">
+<div class="px-6 py-4 border-b border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="terminal">terminal</span>
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest">Real-time System Logs</h2>
+</div>
+<div class="flex gap-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Filtered by: <span class="text-on-surface">Critical</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Status: <span class="text-primary">Syncing</span></span>
+</div>
+</div>
+<div class="h-64 overflow-y-auto p-6 space-y-2 font-mono text-[13px]">
+<div class="flex gap-4 text-on-surface-variant border-b border-white/5 pb-2">
+<span class="w-24 text-primary shrink-0">[14:22:01]</span>
+<span class="w-20 shrink-0 text-primary">SYS-MAIN</span>
+<span>Fleet synchronization sequence complete. 2 units reported operational.</span>
+</div>
+<div class="flex gap-4 text-on-surface-variant border-b border-white/5 pb-2">
+<span class="w-24 text-primary shrink-0">[14:22:15]</span>
+<span class="w-20 shrink-0 text-on-surface">BOT-01</span>
+<span>Visual processing unit detecting elevated macro-plastic density in Sector 7G.</span>
+</div>
+<div class="flex gap-4 text-on-surface-variant border-b border-white/5 pb-2">
+<span class="w-24 text-primary shrink-0">[14:23:45]</span>
+<span class="w-20 shrink-0 text-on-surface">BOT-01</span>
+<span>Collection cycle initiated. Expected extraction: 1.2kg.</span>
+</div>
+<div class="flex gap-4 text-on-surface-variant border-b border-white/5 pb-2">
+<span class="w-24 text-primary shrink-0">[14:25:00]</span>
+<span class="w-20 shrink-0 text-error">CRIT-04</span>
+<span class="text-error">Bot-02 offline for scheduled propulsion clearing. Auto-docking confirmed.</span>
+</div>
+<div class="flex gap-4 text-on-surface-variant border-b border-white/5 pb-2">
+<span class="w-24 text-primary shrink-0">[14:27:12]</span>
+<span class="w-20 shrink-0 text-primary">SYS-ENV</span>
+<span>River flow rate increased to 4.2m/s. Adjusting propulsion torque for all active units.</span>
+</div>
+<div class="flex gap-4 text-on-surface-variant border-b border-white/5 pb-2">
+<span class="w-24 text-primary shrink-0">[14:28:44]</span>
+<span class="w-20 shrink-0 text-on-surface">BOT-01</span>
+<span>Internal storage at 75% capacity. Estimating 12 minutes until offload required.</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding border-t border-white/10 bg-background">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-inline max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase mb-8 md:mb-0 hover:text-primary transition-colors">
+                CleanRiver Bot
+            </a>
+<div class="flex flex-col items-center md:items-end space-y-6">
+<div class="flex space-x-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="ethics.html">Ethics</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="support.html">Support</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="legal.html">Legal</a>
+</div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant opacity-50">
+                    © 2024 CleanRiver Bot. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Log streaming simulation
+        const logContainer = document.querySelector('.overflow-y-auto');
+        const logs = [
+            { time: '[14:30:11]', unit: 'BOT-01', msg: 'Battery optimization active. Throttling non-essential sensors.', color: 'text-on-surface' },
+            { time: '[14:31:05]', unit: 'SYS-MAIN', msg: 'Cloud-sync relay stable. Latency: 22ms.', color: 'text-primary' },
+            { time: '[14:32:19]', unit: 'BOT-01', msg: 'Object identification: Abandoned fishing net. Deploying heavy-duty collector.', color: 'text-on-surface' }
+        ];
+
+        let logIndex = 0;
+        function addNewLog() {
+            if (logIndex >= logs.length) return;
+            
+            const log = logs[logIndex];
+            const div = document.createElement('div');
+            div.className = 'flex gap-4 text-on-surface-variant border-b border-white/5 pb-2 animate-pulse';
+            div.innerHTML = `
+                <span class="w-24 text-primary shrink-0">${log.time}</span>
+                <span class="w-20 shrink-0 ${log.color}">${log.unit}</span>
+                <span>${log.msg}</span>
+            `;
+            logContainer.appendChild(div);
+            logContainer.scrollTop = logContainer.scrollHeight;
+            
+            setTimeout(() => div.classList.remove('animate-pulse'), 1000);
+            logIndex++;
+            setTimeout(addNewLog, 8000);
+        }
+
+        setTimeout(addNewLog, 5000);
+    </script>
+</body></html>

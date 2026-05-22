@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ethical Governance | CleanRiver Bot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-tertiary": "#2c3133",
+                        "on-surface": "#e0e3e4",
+                        "tertiary": "#dfe3e6",
+                        "tertiary-fixed-dim": "#c3c7ca",
+                        "surface-container-high": "#272b2c",
+                        "inverse-on-surface": "#2d3132",
+                        "outline": "#90909a",
+                        "on-primary": "#1f2d5e",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#454747",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "outline-variant": "#45464f",
+                        "surface-variant": "#313536",
+                        "background": "#101415",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "inverse-surface": "#e0e3e4",
+                        "surface-tint": "#b7c4ff",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container": "#1c2021",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-surface-variant": "#c6c5d0",
+                        "inverse-primary": "#4f5c90",
+                        "surface-container-low": "#181c1d",
+                        "on-tertiary-fixed": "#171c1e",
+                        "primary-container": "#b7c4ff",
+                        "tertiary-fixed": "#dfe3e6",
+                        "on-background": "#e0e3e4",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface": "#101415",
+                        "surface-container-highest": "#313536",
+                        "tertiary-container": "#c3c7ca",
+                        "surface-dim": "#101415",
+                        "on-secondary": "#2f3131",
+                        "on-tertiary-container": "#4e5355",
+                        "secondary": "#c6c6c7",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#dce1ff",
+                        "on-tertiary-fixed-variant": "#42484a",
+                        "on-primary-fixed-variant": "#374476",
+                        "on-primary-container": "#435083",
+                        "on-primary-fixed": "#071749",
+                        "on-error": "#690005",
+                        "primary": "#dde1ff",
+                        "surface-bright": "#363a3b",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1.5rem",
+                        "container-max": "1440px",
+                        "section-padding": "8rem",
+                        "margin-inline": "2rem",
+                        "gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["Inter"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-base": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "500"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "body-md-mobile": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e4;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(28, 32, 33, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-base antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-inline py-5 max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase hover:text-primary transition-colors cursor-pointer">
+                CleanRiver Bot
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="technology.html">Technology</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="impact.html">Impact</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="gallery.html">Gallery</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="command.html">Command</a>
+</div>
+<a href="deploy.html" class="bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm uppercase tracking-widest rounded-sm hover:scale-95 transition-all duration-200">
+                Deploy Bot
+            </a>
+</div>
+</nav>
+<main class="pt-32">
+
+<!-- Hero -->
+<section class="relative min-h-[70vh] flex items-center justify-center text-center overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+<img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAomLL-RVbXoX8VGZmn5dWgqA4xlTdBpBcmlREnARusJbeXob2imLLKbG01nWB6frkRpJUaCF5-Qemhr5C7pSN9lrups3XodB6tUBKvG4wJkB49LRRLfEMZjcV0ySAxsbKk3IOEdK8vWdXVUj5cEbM_NwooXU6S_KbURFEt8mmkLnf2gO0GN447yZ8eQd7KoBvbsp90x0YYWVQQhJ3seDVEnlSdnULbRhuNksfzNkpN5W5Wn0-NKyqf-NlFpxABKa8mdlQfsAY9TP8" alt="Ethics Background">
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+</div>
+<div class="relative z-10 max-w-4xl px-margin-inline">
+<span class="font-label-sm text-primary uppercase tracking-[0.4em] mb-4 block">Corporate Protocol</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase mb-8 tracking-[0.25em]">Ethical Governance</h1>
+<div class="w-24 h-[1px] bg-primary mx-auto mb-8"></div>
+<p class="font-body-base text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                    CleanRiver Bot operates under a strict framework of autonomous environmental stewardship, ensuring that our pursuit of ecological restoration never compromises the delicate balance of the natural world.
+                </p>
+</div>
+</section>
+
+<!-- Principles Grid -->
+<section class="px-margin-inline py-section-padding max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-panel p-12 flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">eco</span>
+<span class="font-label-sm text-outline-variant tracking-widest">01</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase tracking-[0.15em]">Environmental Priority</h3>
+<p class="font-body-base text-on-surface-variant">The restoration of the aquatic ecosystem is the primary directive. Every decision made by the bot's neural engine is weighted against the long-term health of the riverbed and water quality.</p>
+</div>
+<div class="glass-panel p-12 flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">visibility_off</span>
+<span class="font-label-sm text-outline-variant tracking-widest">02</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase tracking-[0.15em]">Species Non-Interference</h3>
+<p class="font-body-base text-on-surface-variant">Autonomous navigation protocols mandate a 10-meter exclusion zone for all indigenous fauna. The bot utilizes thermal and acoustic sensors to detect life, halting all mechanical actions until the area is clear.</p>
+</div>
+<div class="glass-panel p-12 flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">analytics</span>
+<span class="font-label-sm text-outline-variant tracking-widest">03</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase tracking-[0.15em]">Data Transparency</h3>
+<p class="font-body-base text-on-surface-variant">All non-proprietary environmental metrics collected by our fleet are pushed to an open-source ledger, accessible to global research institutions and the public in real-time.</p>
+</div>
+<div class="glass-panel p-12 flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">groups</span>
+<span class="font-label-sm text-outline-variant tracking-widest">04</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase tracking-[0.15em]">Community Accountability</h3>
+<p class="font-body-base text-on-surface-variant">Deployment is only initiated after local community consultation. Our ethics board includes regional environmentalists and indigenous representatives to ensure cultural significance is honored.</p>
+</div>
+</div>
+</section>
+
+<!-- Technical Section -->
+<section class="px-margin-inline py-section-padding border-y border-white/5 bg-surface-container-low">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 items-center gap-margin-inline">
+<div class="lg:col-span-5">
+<h2 class="font-headline-md text-headline-md uppercase tracking-[0.2em] mb-8 text-primary">Precision Engineering for Peace of Mind</h2>
+<p class="font-body-base text-on-surface-variant leading-relaxed mb-8">
+                        Our bots are equipped with "Ethical Circuit Breakers"—hard-coded safety protocols that override AI decisions if environmental parameters exceed safe thresholds.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface font-label-sm tracking-wider uppercase">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                            Real-time biodiversity mapping
+                        </li>
+<li class="flex items-center gap-4 text-on-surface font-label-sm tracking-wider uppercase">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                            Zero-leak hydraulic systems
+                        </li>
+<li class="flex items-center gap-4 text-on-surface font-label-sm tracking-wider uppercase">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                            Biodegradable external chassis
+                        </li>
+</ul>
+</div>
+<div class="lg:col-span-7 aspect-video relative overflow-hidden rounded-lg">
+<img alt="Technical schematic" class="w-full h-full object-cover grayscale opacity-50 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtjW56OalRtm5amwB5W-EcZnr24Ln4m1z_pPpJaDJAMrtXShgMek8vEhpKHaigeRpK3lsqB7efCStu--4XqfsvBzYkztcgjQY0p81GYv7x9v0K4CdIyC9x9agY69RYOUX8MvniggPy3E5Hy4RKrbmYGJ0LZ8prcaDLqlRaxPrb8nc4dvp5Po-HGmS4Wrs8UryfindMhe4f_hOXcF6juQBOsM2nQ7GWcOvgHNp4ZlyBRAVEhG5zaAEEQG1mmMtSuPwkLILCowLjki8">
+<div class="absolute inset-0 border border-white/10 flex items-center justify-center">
+<div class="p-8 border border-primary/20 backdrop-blur-sm">
+<span class="font-label-sm text-primary tracking-[0.5em] uppercase">System Schematic v.4.02</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding border-t border-white/10 bg-background">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-inline max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase mb-8 md:mb-0 hover:text-primary transition-colors">
+                CleanRiver Bot
+            </a>
+<div class="flex flex-col items-center md:items-end space-y-6">
+<div class="flex space-x-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-1 transition-all" href="ethics.html">Ethics</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="support.html">Support</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="legal.html">Legal</a>
+</div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant opacity-50">
+                    © 2024 CleanRiver Bot. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body>
+</html>

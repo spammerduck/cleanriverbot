@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CleanRiver Bot | Environmental Impact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
+
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-tertiary": "#2c3133",
+                        "on-surface": "#e0e3e4",
+                        "tertiary": "#dfe3e6",
+                        "tertiary-fixed-dim": "#c3c7ca",
+                        "surface-container-high": "#272b2c",
+                        "inverse-on-surface": "#2d3132",
+                        "outline": "#90909a",
+                        "on-primary": "#1f2d5e",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#454747",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "outline-variant": "#45464f",
+                        "surface-variant": "#313536",
+                        "background": "#101415",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "inverse-surface": "#e0e3e4",
+                        "surface-tint": "#b7c4ff",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container": "#1c2021",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-surface-variant": "#c6c5d0",
+                        "inverse-primary": "#4f5c90",
+                        "surface-container-low": "#181c1d",
+                        "on-tertiary-fixed": "#171c1e",
+                        "primary-container": "#b7c4ff",
+                        "tertiary-fixed": "#dfe3e6",
+                        "on-background": "#e0e3e4",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface": "#101415",
+                        "surface-container-highest": "#313536",
+                        "tertiary-container": "#c3c7ca",
+                        "surface-dim": "#101415",
+                        "on-secondary": "#2f3131",
+                        "on-tertiary-container": "#4e5355",
+                        "secondary": "#c6c6c7",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#dce1ff",
+                        "on-tertiary-fixed-variant": "#42484a",
+                        "on-primary-fixed-variant": "#374476",
+                        "on-primary-container": "#435083",
+                        "on-primary-fixed": "#071749",
+                        "on-error": "#690005",
+                        "primary": "#dde1ff",
+                        "surface-bright": "#363a3b",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1.5rem",
+                        "container-max": "1440px",
+                        "section-padding": "8rem",
+                        "margin-inline": "2rem",
+                        "gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["Inter"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-base": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "500"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "body-md-mobile": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { overflow-x: hidden; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02);
+        }
+        .glow-cyan { box-shadow: 0 0 25px rgba(125, 244, 255, 0.15); }
+        .glow-green { box-shadow: 0 0 25px rgba(121, 255, 91, 0.15); }
+        .circuit-bg {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .animated-counter { font-variant-numeric: tabular-nums; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-base antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-inline py-5 max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase hover:text-primary transition-colors">
+                CleanRiver Bot
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="technology.html">Technology</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="impact.html">Impact</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="gallery.html">Gallery</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="command.html">Command</a>
+</div>
+<a href="deploy.html" class="bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm uppercase tracking-widest rounded-sm hover:scale-95 transition-all duration-200">
+                Deploy Bot
+            </a>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-margin-inline max-w-container-max mx-auto">
+<!-- Header Section -->
+<section class="mb-16">
+<h1 class="font-headline-xl text-headline-xl mb-4 bg-gradient-to-r from-primary-fixed via-secondary-fixed to-primary-fixed bg-clip-text text-transparent">Global Impact Dashboard</h1>
+<p class="text-on-surface-variant max-w-2xl text-body-md">Real-time telemetry and ecological restoration metrics from our global fleet of autonomous river guardians.</p>
+</section>
+<!-- Animated Counters Hero -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-16">
+<div class="glass-card p-10 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed/5 blur-3xl group-hover:bg-primary-fixed/10 transition-colors"></div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest">Global Cleanup Effort</span>
+<div class="flex items-baseline gap-4">
+<span class="font-headline-xl text-headline-xl animated-counter text-primary-fixed" id="plastic-counter">1,284.42</span>
+<span class="font-headline-lg text-headline-lg text-on-surface-variant">Tons</span>
+</div>
+<p class="text-on-surface-variant">Total plastic waste recovered from freshwater systems.</p>
+<div class="mt-6 w-full h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed shadow-[0_0_10px_#b7c4ff]" style="width: 74%"></div>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed/5 blur-3xl group-hover:bg-secondary-fixed/10 transition-colors"></div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Hydrological Restoration</span>
+<div class="flex items-baseline gap-4">
+<span class="font-headline-xl text-headline-xl animated-counter text-secondary-fixed" id="water-counter">84,921</span>
+<span class="font-headline-lg text-headline-lg text-on-surface-variant">M³</span>
+</div>
+<p class="text-on-surface-variant">Volume of water filtered and returned to pristine status.</p>
+<div class="mt-6 w-full h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed shadow-[0_0_10px_#79ff5b]" style="width: 62%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Map & Data Visuals -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mb-16">
+<!-- Map Container -->
+<div class="lg:col-span-2 glass-card rounded-xl overflow-hidden h-[500px] relative group">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="A futuristic digital satellite map of a coastal delta region at dusk. The map features glowing cyan nodes indicating active robot deployment zones and pulsing green highlights over protected marine areas. The aesthetic is high-tech and cinematic, utilizing deep blues and blacks with vibrant bioluminescent-style accents to represent data layers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB55-OhS0hyN9Jeu97fSpccVw3p8slVjjsEW3EW0mD68oyGAuc7nU6L7d0YeMMmdgbMJNyqwIiF4gUneGp8ZgakKPl2ZuIAePPHEFUNZEmHEK219-dyY5ps6D_BMZOXZea0l9wuwjJIxlPr7vAosWQ_q5h96sed2rTAYn9qTEZDyyGgVnvMYedMKYV9ir887gwUC-x54KgE9urC-81kj5CgS20FJ0ohfGmC5AbfcRKA0KhvS_q0Z79pytJRWeu2Iosmvg7XoafH7lY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute top-6 left-6 flex flex-col gap-3">
+<div class="glass-card px-4 py-2 rounded-full flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="font-label-sm text-label-sm">342 Active Units</span>
+</div>
+<div class="glass-card px-4 py-2 rounded-full flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+<span class="font-label-sm text-label-sm">High-Impact Zones</span>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 glass-card p-4 rounded-lg">
+<h4 class="font-label-sm text-label-sm text-primary-fixed mb-2">Live Deployment: Citarum River</h4>
+<div class="flex gap-2 text-[10px] font-mono">
+<span class="text-on-surface-variant">Lat: -6.1751</span>
+<span class="text-on-surface-variant">Long: 106.8272</span>
+</div>
+</div>
+</div>
+<!-- Side Metrics -->
+<div class="flex flex-col gap-gutter">
+<div class="glass-card p-6 rounded-xl flex-1">
+<h3 class="font-label-sm text-label-sm mb-6 text-on-surface-variant">Recovery Trends</h3>
+<div class="flex items-end gap-2 h-32 mb-4">
+<div class="flex-1 bg-primary-fixed/20 rounded-t-sm h-[40%] hover:bg-primary-fixed/40 transition-all"></div>
+<div class="flex-1 bg-primary-fixed/20 rounded-t-sm h-[60%] hover:bg-primary-fixed/40 transition-all"></div>
+<div class="flex-1 bg-primary-fixed/20 rounded-t-sm h-[55%] hover:bg-primary-fixed/40 transition-all"></div>
+<div class="flex-1 bg-primary-fixed/20 rounded-t-sm h-[80%] hover:bg-primary-fixed/40 transition-all"></div>
+<div class="flex-1 bg-primary-fixed/20 rounded-t-sm h-[70%] hover:bg-primary-fixed/40 transition-all"></div>
+<div class="flex-1 bg-primary-fixed/20 rounded-t-sm h-[95%] hover:bg-primary-fixed/40 transition-all"></div>
+<div class="flex-1 bg-primary-fixed/20 rounded-t-sm h-[85%] hover:bg-primary-fixed/40 transition-all"></div>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-mono">
+<span>MON</span><span>WED</span><span>FRI</span><span>SUN</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl flex-1">
+<h3 class="font-label-sm text-label-sm mb-4 text-on-surface-variant">Composition</h3>
+<div class="flex flex-col gap-4">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span>HDPE Plastics</span><span>42%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed" style="width: 42%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span>Organic Debris</span><span>28%</span>
+</div>
+<div class="w-full h-1.5 bg-secondary-fixed" style="width: 28%"></div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span>Microplastics</span><span>15%</span>
+</div>
+<div class="w-full h-1.5 bg-on-tertiary-container" style="width: 15%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Marine Life Protection -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+<h2 class="font-headline-lg text-headline-lg">Marine Life Protection</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="glass-card p-6 rounded-xl group hover:glow-green transition-all duration-500">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-4 group-hover:scale-110 transition-transform inline-block" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="font-body-md font-bold mb-2">Species Safety</h4>
+<p class="text-on-surface-variant text-sm">AI-driven sonar prevents accidental capture of aquatic species with 99.9% accuracy.</p>
+</div>
+<div class="glass-card p-6 rounded-xl group hover:glow-green transition-all duration-500">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-4 group-hover:scale-110 transition-transform inline-block" data-icon="waves">waves</span>
+<h4 class="font-body-md font-bold mb-2">Oxygenation</h4>
+<p class="text-on-surface-variant text-sm">Deployment zones show a 12% average increase in dissolved oxygen levels within 3 months.</p>
+</div>
+<div class="glass-card p-6 rounded-xl group hover:glow-green transition-all duration-500">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-4 group-hover:scale-110 transition-transform inline-block" data-icon="water_drop">water_drop</span>
+<h4 class="font-body-md font-bold mb-2">Toxin Filtering</h4>
+<p class="text-on-surface-variant text-sm">Nano-membrane technology isolates heavy metals and industrial chemical runoff.</p>
+</div>
+<div class="glass-card p-6 rounded-xl group hover:glow-green transition-all duration-500">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-4 group-hover:scale-110 transition-transform inline-block" data-icon="eco">eco</span>
+<h4 class="font-body-md font-bold mb-2">Habitat Regrowth</h4>
+<p class="text-on-surface-variant text-sm">Protected zones have seen a 3x faster recovery rate for local mangrove ecosystems.</p>
+</div>
+</div>
+</section>
+<!-- Restoration Progress Call-to-Action -->
+<div class="glass-card p-12 rounded-2xl relative overflow-hidden text-center">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-fixed/5 via-secondary-fixed/5 to-primary-fixed/5 opacity-50"></div>
+<div class="relative z-10">
+<h3 class="font-headline-lg text-headline-lg mb-4">Toward Zero Waste Rivers</h3>
+<p class="text-on-surface-variant max-w-xl mx-auto mb-8">Our goal is to restore 50 major river systems by 2030. Track our progress or join the initiative to protect our oceans at the source.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="Toward_Zero_Waste_Rivers_Report.pdf" download class="border border-white/20 px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-all">Download Report (PDF)</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding border-t border-white/10 bg-background">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-inline max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase mb-8 md:mb-0 hover:text-primary transition-colors">
+                CleanRiver Bot
+            </a>
+<div class="flex flex-col items-center md:items-end space-y-6">
+<div class="flex space-x-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="ethics.html">Ethics</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="support.html">Support</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="legal.html">Legal</a>
+</div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant opacity-50">
+                    © 2024 CleanRiver Bot. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for animated counters
+        function animateValue(id, start, end, duration, decimals = 2) {
+            let obj = document.getElementById(id);
+            let range = end - start;
+            let minTimer = 50;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            stepTime = Math.max(stepTime, minTimer);
+            let startTime = new Date().getTime();
+            let endTime = startTime + duration;
+            let timer;
+
+            function run() {
+                let now = new Date().getTime();
+                let remaining = Math.max((endTime - now) / duration, 0);
+                let value = end - (remaining * range);
+                obj.innerHTML = value.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+                if (value == end) {
+                    clearInterval(timer);
+                }
+            }
+
+            timer = setInterval(run, stepTime);
+            run();
+        }
+
+        // Initialize counters with a slight delay
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                animateValue("plastic-counter", 1100, 1284.42, 2000, 2);
+                animateValue("water-counter", 80000, 84921, 2000, 0);
+            }, 500);
+        });
+
+        // Hover tilt effect for cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const dx = x - xc;
+                const dy = y - yc;
+                
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+                card.style.transform = `perspective(1000px) rotateY(${dx / 50}deg) rotateX(${-dy / 50}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+            });
+        });
+    </script>
+</body></html>

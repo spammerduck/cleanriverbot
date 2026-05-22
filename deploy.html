@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Initiate Deployment | CleanRiver Bot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+        background-color: #101415;
+        color: #e0e3e5;
+        overflow-x: hidden;
+    }
+    .glass-panel {
+        background: rgba(24, 28, 29, 0.4);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+</style>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-tertiary": "#2c3133",
+                    "on-surface": "#e0e3e4",
+                    "tertiary": "#dfe3e6",
+                    "tertiary-fixed-dim": "#c3c7ca",
+                    "surface-container-high": "#272b2c",
+                    "inverse-on-surface": "#2d3132",
+                    "outline": "#90909a",
+                    "on-primary": "#1f2d5e",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#454747",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "outline-variant": "#45464f",
+                    "surface-variant": "#313536",
+                    "background": "#101415",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "inverse-surface": "#e0e3e4",
+                    "surface-tint": "#b7c4ff",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "surface-container-lowest": "#0b0f10",
+                    "surface-container": "#1c2021",
+                    "on-secondary-container": "#b4b5b5",
+                    "on-surface-variant": "#c6c5d0",
+                    "inverse-primary": "#4f5c90",
+                    "surface-container-low": "#181c1d",
+                    "on-tertiary-fixed": "#171c1e",
+                    "primary-container": "#b7c4ff",
+                    "tertiary-fixed": "#dfe3e6",
+                    "on-background": "#e0e3e4",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface": "#101415",
+                    "surface-container-highest": "#313536",
+                    "tertiary-container": "#c3c7ca",
+                    "surface-dim": "#101415",
+                    "on-secondary": "#2f3131",
+                    "on-tertiary-container": "#4e5355",
+                    "secondary": "#c6c6c7",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed": "#dce1ff",
+                    "on-tertiary-fixed-variant": "#42484a",
+                    "on-primary-fixed-variant": "#374476",
+                    "on-primary-container": "#435083",
+                    "on-primary-fixed": "#071749",
+                    "on-error": "#690005",
+                    "primary": "#dde1ff",
+                    "surface-bright": "#363a3b",
+                    "error-container": "#93000a"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "stack-sm": "0.5rem",
+                    "stack-md": "1.5rem",
+                    "container-max": "1440px",
+                    "section-padding": "8rem",
+                    "margin-inline": "2rem",
+                    "gutter": "1.5rem"
+                },
+                "fontFamily": {
+                    "nav-link": ["Inter"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-base": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "body-md": ["Inter"]
+                },
+                "fontSize": {
+                    "nav-link": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "500"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-xl-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md-mobile": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                }
+            }
+        }
+    }
+</script>
+</head>
+<body class="font-body-base text-body-base">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-inline py-5 max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase hover:text-primary transition-colors cursor-pointer">
+            CleanRiver Bot
+        </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="technology.html">Technology</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="impact.html">Impact</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="gallery.html">Gallery</a>
+<a class="font-nav-link text-nav-link uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="command.html">Command</a>
+</div>
+<a href="deploy.html" class="bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm uppercase tracking-widest rounded-sm hover:scale-95 transition-all duration-200">
+            Deploy Bot
+        </a>
+</div>
+</nav>
+
+<main class="pt-32">
+
+<!-- Hero Section -->
+<section class="px-margin-inline max-w-container-max mx-auto mb-24">
+<div class="grid md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-8">
+<span class="font-label-sm text-label-sm uppercase text-primary mb-4 block">Mission Control</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface uppercase max-w-2xl leading-tight">
+                    Initiate<br>Deployment
+                </h1>
+<p class="font-body-base text-body-base text-on-surface-variant mt-8 max-w-xl">
+                    Start the strategic mission planning process. Our technical team will evaluate your waterway requirements to configure the optimal CleanRiver Bot swarm for your specific environmental challenges.
+                </p>
+</div>
+<div class="md:col-span-4 flex justify-end">
+<div class="text-right border-l border-white/10 pl-8 pb-4 hidden md:block">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Protocol</span>
+<div class="font-headline-md text-headline-md text-on-surface mt-2">v.2.4.0_EXP</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Main Content Area: Bento Grid Layout -->
+<section class="px-margin-inline max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+
+<!-- Left Column: Form (Glass Card) -->
+<div class="md:col-span-7 glass-panel p-8 md:p-12 rounded-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-12 uppercase">Operational Briefing</h2>
+<form class="space-y-10" id="deploy-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative group">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-3 block">Organization Name</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary focus:ring-0 text-on-surface py-2 transition-colors placeholder-on-tertiary-container" placeholder="e.g. Environmental Agency" type="text">
+</div>
+<div class="relative group">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-3 block">Contact Person</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary focus:ring-0 text-on-surface py-2 transition-colors placeholder-on-tertiary-container" placeholder="Full Name" type="text">
+</div>
+</div>
+<div class="relative group">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-3 block">Email Address</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary focus:ring-0 text-on-surface py-2 transition-colors placeholder-on-tertiary-container" placeholder="contact@organization.org" type="email">
+</div>
+<div class="relative group">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-3 block">Mission Location (Waterway/River)</label>
+<div class="flex items-center border-b border-white/20 focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">location_on</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface py-2 placeholder-on-tertiary-container" placeholder="Search coordinates or river name" type="text">
+</div>
+</div>
+<div class="relative group">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-3 block">Mission Requirements &amp; Pollution Profile</label>
+<textarea class="w-full bg-transparent border-b border-white/20 focus:border-primary focus:ring-0 text-on-surface py-2 transition-colors resize-none placeholder-on-tertiary-container" placeholder="Describe the scale of surface debris and river conditions..." rows="4"></textarea>
+</div>
+<div class="pt-6">
+<button class="w-full md:w-auto bg-primary-container text-on-primary-fixed py-4 px-12 rounded-full font-label-sm text-label-sm uppercase hover:bg-primary transition-all active:scale-95 duration-200" type="submit">
+                            Submit Mission Request
+                        </button>
+</div>
+</form>
+<!-- Confirmation (hidden by default) -->
+<div class="hidden text-center py-16" id="deploy-confirmation">
+<span class="material-symbols-outlined text-primary text-6xl mb-6 block" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-4">Mission Request Received</h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-md mx-auto mb-2" id="deploy-confirm-msg">
+                    Thank you for your submission. Our technical team will review your requirements.
+                </p>
+<p class="font-label-sm text-label-sm uppercase text-primary mt-4">Estimated review: 48 hours</p>
+</div>
+</div>
+
+<!-- Right Column: Map & Logistics -->
+<div class="md:col-span-5 space-y-8">
+<!-- Interactive Map Component -->
+<div class="h-[400px] w-full glass-panel rounded-xl overflow-hidden relative">
+<div class="absolute inset-0 z-0 grayscale opacity-40">
+<img alt="Satellite map of river delta" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOjThzwa2URtRZ_r4sFynqbI4P_h9QajSaEtuJbPZ6FigmVVIUXV33yuD_1fiKn3FQnsJc_9-AJIKaJREiUzVoHvSbzreq1yj0dsegO5-3GKhp78T07FkyzIvt3DL4MFRg2ZIA5qlnirjs2wE1x3U7GEfWb1ymyh3aR8G6qHDtoM5V6u5KgmO34TyIWmk2HcY4JDDNs5ndaltEh1ndC6_h4IlUhM7HufmCf9Y5SYR9PSxaDk7P8m_NXyepx3RBaMDs21CWjo5M9Q4">
+</div>
+<div class="absolute inset-0 z-10 flex flex-col justify-between p-6 bg-gradient-to-t from-background/80 to-transparent">
+<div class="flex justify-between items-start">
+<span class="bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full text-primary font-label-sm text-[10px] uppercase border border-primary/30">Active Zones</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface">Danube Sector A-12 | Swarm Active</span>
+</div>
+<p class="text-[12px] text-on-surface-variant font-body-base leading-relaxed">
+                                Displaying real-time sensor data for active river bot clusters. Request a new zone deployment via the operational briefing form.
+                            </p>
+</div>
+</div>
+</div>
+
+<!-- Logistics Timeline -->
+<div class="glass-panel p-8 rounded-xl">
+<h3 class="font-label-sm text-label-sm uppercase text-on-surface mb-8 tracking-widest">Deployment Lifecycle</h3>
+<div class="relative space-y-12">
+<div class="absolute left-[11px] top-2 bottom-2 w-px bg-white/10"></div>
+<!-- Step 1 -->
+<div class="relative flex items-start gap-6 group">
+<div class="w-6 h-6 rounded-full bg-background border border-primary-fixed-dim flex items-center justify-center z-10 shrink-0 mt-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></div>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase text-on-surface">01. Evaluation</h4>
+<p class="text-[13px] text-on-surface-variant mt-2 leading-relaxed font-body-base">
+                                    Satellite analysis and on-site debris density mapping to determine swarm size.
+                                </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-start gap-6 group">
+<div class="w-6 h-6 rounded-full bg-background border border-white/20 flex items-center justify-center z-10 shrink-0 mt-1">
+<div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase text-on-surface-variant">02. Logistics</h4>
+<p class="text-[13px] text-on-surface-variant mt-2 leading-relaxed font-body-base">
+                                    Autonomous transport of the CleanRiver Swarm pods to the target site.
+                                </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex items-start gap-6 group">
+<div class="w-6 h-6 rounded-full bg-background border border-white/20 flex items-center justify-center z-10 shrink-0 mt-1">
+<div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase text-on-surface-variant">03. Launch</h4>
+<p class="text-[13px] text-on-surface-variant mt-2 leading-relaxed font-body-base">
+                                    Deployment and synchronization with global environmental satellite network.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Aesthetic Imagery Section -->
+<section class="px-margin-inline max-w-container-max mx-auto mt-24">
+<div class="w-full h-[300px] rounded-xl overflow-hidden grayscale contrast-125 border border-white/5 relative">
+<img alt="Carbon fiber robotics components" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9ZLxBmxMD2Obsct2puhm4-OxO46yLT3BXtmGaNtQm9uNJBR-gcanyWftTpr1WtSHVh-YI8HR8fHGqZpnIWdpP_-eqV8rXLJ85pF7YknwclyDxo0pyikWsEgFL9i5WZsv4fhWoIXIwvK2XFtAwZfPtP47wVpi2AF688B2jnRqRC3egrDMLkFfLssANoZVG57ogw1GuqC9a7Bo9NajZsXppMe51X5i8PRZX2CD27OkCTHm7vxIHOJA554XyMi_EyXkqBjqJGpyrTsw">
+<div class="absolute inset-0 bg-gradient-to-r from-background/90 to-transparent flex items-center p-12">
+<div class="max-w-md">
+<span class="font-label-sm text-label-sm uppercase text-primary mb-2 block">Engineering Standards</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-4 leading-tight">Built for Resilience</h3>
+<p class="font-body-base text-body-base text-on-surface-variant text-[14px]">
+                        Each CleanRiver Bot is engineered to withstand extreme currents and debris loads, ensuring continuous mission integrity in the world's most polluted waterways.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-section-padding border-t border-white/10 bg-background">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-inline max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase mb-8 md:mb-0 hover:text-primary transition-colors">
+            CleanRiver Bot
+        </a>
+<div class="flex flex-col items-center md:items-end space-y-6">
+<div class="flex space-x-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="ethics.html">Ethics</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="support.html">Support</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-all" href="legal.html">Legal</a>
+</div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant opacity-50">
+                &copy; 2024 CleanRiver Bot. All rights reserved.
+            </p>
+</div>
+</div>
+</footer>
+
+<script>
+    // Form submission with confirmation UX
+    const form = document.getElementById('deploy-form');
+    const confirmation = document.getElementById('deploy-confirmation');
+    const confirmMsg = document.getElementById('deploy-confirm-msg');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const org = form.querySelector('input[placeholder="e.g. Environmental Agency"]').value || 'your organization';
+        const name = form.querySelector('input[placeholder="Full Name"]').value || 'your team';
+        confirmMsg.textContent = `Thank you, ${name} from ${org}. Our technical team will review your mission requirements and reach out within 48 hours.`;
+        form.classList.add('hidden');
+        confirmation.classList.remove('hidden');
+    });
+
+    // Input focus micro-interactions
+    document.querySelectorAll('input, textarea').forEach(input => {
+        input.addEventListener('focus', () => {
+            input.parentElement.classList.add('border-primary');
+        });
+        input.addEventListener('blur', () => {
+            if (!input.value) {
+                input.parentElement.classList.remove('border-primary');
+            }
+        });
+    });
+</script>
+</body>
+</html>
